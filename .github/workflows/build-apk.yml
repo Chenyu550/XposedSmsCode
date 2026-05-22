@@ -32,6 +32,8 @@ jobs:
           allow-snapshot-wrappers: true
 
       - name: Validate release notes and tag/version consistency
+        env:
+          ALLOW_NON_ASCII_COMMIT_SUBJECT: ${{ github.event_name == 'workflow_dispatch' && 'true' || 'false' }}
         run: |
           chmod +x scripts/check_release_guard.sh
           if [[ "${GITHUB_REF_TYPE}" == "tag" ]]; then
