@@ -6,7 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.provider.Telephony
-import com.github.tianma8023.xposed.smscode.BuildConfig
+import com.myriastra.smsotp.BuildConfig
 import com.github.magisk317.smscode.core.R
 import com.github.magisk317.smscode.common.constant.NotificationConst
 import com.github.magisk317.smscode.common.utils.ActivationDiagnosticsStore

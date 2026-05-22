@@ -248,7 +248,7 @@ jobs:
           release_name="${{ steps.extract_version.outputs.version_name }}"
           release_notes=$(cat <<'EOF'
             <div align="center">
-              <a href="https://play.google.com/store/apps/details?id=com.github.tianma8023.xposed.smscode">
+              <a href="https://play.google.com/store/apps/details?id=com.myriastra.smsotp">
                 <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="80"/>
               </a>
               <a href="https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }}">
@@ -359,7 +359,7 @@ jobs:
           cmd=(
             "$fastlane_bin" supply
             --aab "${{ steps.resolve_play.outputs.aab_file }}"
-            --package_name "com.github.tianma8023.xposed.smscode"
+            --package_name "com.myriastra.smsotp"
             --track "${{ steps.determine_track.outputs.track }}"
             --release_status "completed"
             --json_key_data "$ANDROID_PUBLISHER_CREDENTIALS"
@@ -389,7 +389,7 @@ jobs:
     env:
       HAS_MODULES_REPO_TOKEN: ${{ secrets.XPOSED_MODULES_REPO_TOKEN != '' }}
       HAS_RELEASE_KEYSTORE: ${{ secrets.RELEASE_KEYSTORE != '' }}
-      MODULES_REPO: Xposed-Modules-Repo/com.github.tianma8023.xposed.smscode
+      MODULES_REPO: Xposed-Modules-Repo/com.myriastra.smsotp
     steps:
       - name: Download APK Artifacts
         uses: actions/download-artifact@v8
@@ -422,7 +422,7 @@ jobs:
             --repo "${{ env.MODULES_REPO }}" \
             --title "${{ steps.extract_version.outputs.version_name }}" \
             --notes "<div align=\"center\">
-            <a href=\"https://play.google.com/store/apps/details?id=com.github.tianma8023.xposed.smscode\">
+            <a href=\"https://play.google.com/store/apps/details?id=com.myriastra.smsotp\">
               <img src=\"https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png\" alt=\"Get it on Google Play\" height=\"80\"/>
             </a>
             <a href=\"https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }}\">

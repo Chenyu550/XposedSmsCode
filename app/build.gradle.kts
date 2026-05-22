@@ -33,7 +33,7 @@ val syncSmsCodeRulesAssets by tasks.registering(Sync::class) {
 }
 
 android {
-    namespace = "com.github.tianma8023.xposed.smscode"
+    namespace = "com.myriastra.smsotp"
     ndkVersion = ndkVersionStr
 
     productFlavors {
@@ -50,7 +50,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.github.tianma8023.xposed.smscode"
+        applicationId = "com.myriastra.smsotp"
         val minSdkCodename = minSdkStr.removePrefix("android-")
         val minSdkAsInt = minSdkCodename.toIntOrNull()
         if (minSdkAsInt != null) {

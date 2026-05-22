@@ -25,7 +25,7 @@ android {
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
         buildConfigField("String", "LOG_TAG", "\"XSmsCode\"")
-        buildConfigField("String", "APPLICATION_ID", "\"com.github.tianma8023.xposed.smscode\"")
+        buildConfigField("String", "APPLICATION_ID", "\"com.myriastra.smsotp\"")
         buildConfigField("boolean", "IS_LITE_BUILD", "true")
         buildConfigField("String", "B_DOWNLOAD_URL", "\"$relayDownloadUrl\"")
         consumerProguardFiles("consumer-rules.pro")

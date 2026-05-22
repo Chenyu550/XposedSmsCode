@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import io.github.magisk317.smscode.runtime.common.utils.ClipboardUtils
 import com.github.magisk317.smscode.core.R
-import com.github.tianma8023.xposed.smscode.BuildConfig
+import com.myriastra.smsotp.BuildConfig
 
 /**
  * Receiver for copy code when notification clicked

@@ -2,7 +2,7 @@ package com.github.magisk317.smscode.xp.hook.code
 
 import android.content.Intent
 import com.github.magisk317.smscode.receiver.CodeNotificationReceiver
-import com.github.tianma8023.xposed.smscode.BuildConfig
+import com.myriastra.smsotp.BuildConfig
 import io.github.magisk317.smscode.verification.CodeNotificationPayload
 
 object CodeNotificationBroadcastContract {

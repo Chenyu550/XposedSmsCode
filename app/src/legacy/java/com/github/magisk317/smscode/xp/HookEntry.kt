@@ -1,6 +1,6 @@
 package com.github.magisk317.smscode.xp
 
-import com.github.tianma8023.xposed.smscode.BuildConfig
+import com.myriastra.smsotp.BuildConfig
 import com.github.magisk317.smscode.xp.hook.code.SmsHandlerHook
 import com.github.magisk317.smscode.xp.hook.mms.MmsMessagesHook
 import com.github.magisk317.smscode.xp.hook.me.ModuleUtilsHook

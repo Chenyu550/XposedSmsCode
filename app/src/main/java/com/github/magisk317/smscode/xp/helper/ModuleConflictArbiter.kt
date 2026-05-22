@@ -3,7 +3,7 @@ package com.github.magisk317.smscode.xp.helper
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
-import com.github.tianma8023.xposed.smscode.BuildConfig
+import com.myriastra.smsotp.BuildConfig
 import com.github.magisk317.smscode.common.constant.TransitionConst
 import io.github.magisk317.smscode.xposed.utils.XLog
 

@@ -10,7 +10,7 @@ import android.media.AudioManager
 import android.os.Build
 import android.os.Bundle
 import android.telephony.TelephonyManager
-import com.github.tianma8023.xposed.smscode.BuildConfig
+import com.myriastra.smsotp.BuildConfig
 import com.github.magisk317.smscode.common.constant.PrefConst
 import com.github.magisk317.smscode.common.utils.ActivationDiagnosticsStore
 import com.github.magisk317.smscode.common.utils.AppPreferencesDataStore
