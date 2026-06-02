@@ -10,6 +10,11 @@ buildscript {
     }
     configurations.all {
         resolutionStrategy {
+            force("org.ow2.asm:asm:9.10")
+            force("org.ow2.asm:asm-commons:9.10")
+            force("org.ow2.asm:asm-tree:9.10")
+            force("org.ow2.asm:asm-util:9.10")
+            force("org.ow2.asm:asm-analysis:9.10")
             // BEGIN AUTO FORCED DEPENDENCIES (managed by workflow)
             force("io.netty:netty-codec:4.1.133.Final")
             force("io.netty:netty-codec-http:4.1.133.Final")
@@ -54,6 +59,7 @@ kover {
 }
 
 val catalog = libs
+val forcedKotlinVersion = libs.versions.kotlin.get()
 
 dependencyLocking {
     lockAllConfigurations()
@@ -118,6 +124,12 @@ subprojects {
     configurations.all {
         resolutionStrategy {
             force(catalog.apache.httpclient)
+            force("org.ow2.asm:asm:9.10")
+            force("org.ow2.asm:asm-commons:9.10")
+            force("org.ow2.asm:asm-tree:9.10")
+            force("org.ow2.asm:asm-util:9.10")
+            force("org.ow2.asm:asm-analysis:9.10")
+            force("org.jetbrains.kotlin:kotlin-metadata-jvm:$forcedKotlinVersion")
             // BEGIN AUTO FORCED DEPENDENCIES (managed by workflow)
             force("io.netty:netty-codec:4.1.133.Final")
             force("io.netty:netty-codec-http:4.1.133.Final")

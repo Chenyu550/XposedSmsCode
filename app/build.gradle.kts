@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.mokkery)
     id("smscode.android.common")
     id("smscode.app.signing")
     id("smscode.app.packaging")
@@ -106,18 +105,17 @@ android {
 
     kotlin {
         compilerOptions {
-            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.fromTarget(javaVersion.toString()))
+            jvmTarget.set(
+                runCatching {
+                    org.jetbrains.kotlin.gradle.dsl.JvmTarget.fromTarget(javaVersion.toString())
+                }.getOrElse { org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_25 }
+            )
         }
     }
 }
 
 tasks.named("preBuild") {
     dependsOn(syncSmsCodeRulesAssets)
-}
-
-mokkery {
-    defaultMockMode.set(dev.mokkery.MockMode.autofill)
-    ignoreFinalMembers.set(true)
 }
 
 dependencies {
@@ -175,7 +173,7 @@ dependencies {
 
     testImplementation(libs.junit.jupiter)
     testRuntimeOnly(libs.junit.platform.launcher)
-    testImplementation(libs.mokkery.runtime.jvm)
+    testImplementation(libs.mockk)
 
     implementation(libs.timber)
     implementation(libs.koin.android)

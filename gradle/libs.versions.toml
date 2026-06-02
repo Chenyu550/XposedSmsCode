@@ -6,7 +6,8 @@ targetSdk = "37"
 ndk = "30.0.14904198"
 
 # JVM versions
-javaBytecode = "25"
+java = "26"
+javaBytecode = "26"
 
 # App version
 versionCode = "115"
@@ -18,11 +19,11 @@ agp = "9.2.1"
 androidx-annotation = "1.10.0"
 androidx-browser = "1.10.0"
 androidx-core-ktx = "1.18.0"
-androidx-material3 = "1.5.0-alpha18"
+androidx-material3 = "1.5.0-alpha20"
 appcompat = "1.7.1"
 commons-lang3 = "3.20.0"
-compose-bom = "2026.04.01"
-coroutines = "1.10.2"
+compose-bom = "2026.05.01"
+coroutines = "1.11.0"
 datastore = "1.2.1"
 detekt = "2.0.0-alpha.3"
 gson = "2.14.0"
@@ -30,19 +31,19 @@ haze = "1.7.2"
 httpclient = "4.5.14"
 jdom2 = "2.0.6.1"
 jose4j = "0.9.6"
-junit-platform = "6.0.3"
-junit5 = "6.0.3"
+junit-platform = "6.1.0"
+junit5 = "6.1.0"
 koin = "4.2.1"
-kotlin = "2.3.21"
+kotlin = "2.4.0-RC2"
 kotlinx-collections-immutable = "0.4.0"
 kotlinx-serialization = "1.11.0"
 kover = "0.9.8"
-ksp = "2.3.7"
+ksp = "2.3.9"
 libxposed-api = "101.0.1"
 libxposed-service = "101.0.0"
 lifecycle = "2.10.0"
 miuix = "0.8.8"
-mokkery = "3.3.0"
+mockk = "1.14.11"
 navigation = "2.9.8"
 okhttp = "5.3.2"
 play-app-update = "2.1.0"
@@ -98,7 +99,7 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 libxposed-api = { module = "io.github.libxposed:api", version.ref = "libxposed-api" }
 libxposed-service = { module = "io.github.libxposed:service", version.ref = "libxposed-service" }
 miuix = { module = "top.yukonga.miuix.kmp:miuix", version.ref = "miuix" }
-mokkery-runtime-jvm = { module = "dev.mokkery:mokkery-runtime-jvm", version.ref = "mokkery" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 okhttp-logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
 play-app-update = { module = "com.google.android.play:app-update", version.ref = "play-app-update" }
@@ -114,5 +115,4 @@ kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref =
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-mokkery = { id = "dev.mokkery", version.ref = "mokkery" }
 test-logger = { id = "com.adarshr.test-logger", version.ref = "test-logger" }
